@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+#!/usr/bin/python
+##-------------------------------------------------------------------
+
+# Prevent malicious call with invalid token
+ALLOWED_TOKEN_LIST = []
+
+# For sensitive methods can only be invoked by given users
+METHOD_ACL_USERLIST = {
+    "chatcloudexpense":["denny.zhang"],
+    "chatproductionalerts":["denny.zhang"],
+    "*":["denny.zhang"]
+}
+
+################################################################################
+# cloud token for cloud bills
+LINODE_TOKEN = ''
+DIGITALOCEAN_TOKEN = ''
+
+# cloud expense
+SKIP_VM_PATTERNS = ''
+SKIP_VOLUMES_PATTERNS = ''
+
+################################################################################
+
+# ssh key
+SSH_KEY_FILE = ''
+
+# TODO: protect passphrase
+KEY_PASSPHRASE = ''

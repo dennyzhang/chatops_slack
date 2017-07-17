@@ -1,0 +1,16 @@
+version: '2'
+services:
+  devops_chatops:
+    container_name: devops_chatops
+    hostname: devops_chatops
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - $PWD:/code/
+    - $PWD/ssh_id_rsa:/code/ssh_id_rsa
+    - $PWD/config.py:/code/config.py
+    ports:
+    - "${CHATOPS_PORT}:8081"
+    restart: always
+    entrypoint: ["bash", "/code/docker-entrypoint.sh"] 

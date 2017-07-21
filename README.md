@@ -1,4 +1,4 @@
-- Check more: http://www.dennyzhang.com/chatqueryhost
+- Check more: https://www.dennyzhang.com/chatqueryhost
 - Reference: https://github.com/slackapi/Slack-Python-Onboarding-Tutorial
 
 # Limitation

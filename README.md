@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/DennyZhang/chatops_slack.svg?branch=master)](https://travis-ci.org/DennyZhang/chatops_slack)
+Travis CI Status: [![Build Status](https://travis-ci.org/DennyZhang/chatops_slack.svg?branch=master)](https://travis-ci.org/DennyZhang/chatops_slack)
 
 - Check more: https://www.dennyzhang.com/chatqueryhost
 - Reference: https://github.com/slackapi/Slack-Python-Onboarding-Tutorial

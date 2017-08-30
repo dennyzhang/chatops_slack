@@ -1,2 +1,2 @@
 #!/bin/bash -e
-find . -name "*.py" | xargs pylint -E
+find . -name "*.py" | grep -v chatops.py | xargs pylint -E

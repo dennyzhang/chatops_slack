@@ -25,3 +25,5 @@ Check: docker-entrypoint.sh
 tail -f /tmp/uwsgi-wsgi.log
 
 docker-compose down && docker-compose up -d && docker exec -it devops_chatops tail -f /tmp/uwsgi-wsgi.log
+
+Connect and discuss with Denny in [LinkedIn](https://www.linkedin.com/in/dennyzhang001) or [dennyzhang.com](https://www.dennyzhang.com).

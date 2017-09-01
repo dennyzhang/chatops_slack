@@ -19,11 +19,12 @@ wget -O /usr/sbin/node_usage.py \
 ```
 
 # Useful commands
-
+```
 Check: docker-entrypoint.sh
 
 tail -f /tmp/uwsgi-wsgi.log
 
 docker-compose down && docker-compose up -d && docker exec -it devops_chatops tail -f /tmp/uwsgi-wsgi.log
+```
 
 Discuss with Denny in [LinkedIn](https://www.linkedin.com/in/dennyzhang001) or [Blog](https://www.dennyzhang.com).

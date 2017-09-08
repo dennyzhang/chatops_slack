@@ -1,11 +1,11 @@
 #!/usr/bin/python
 ##-------------------------------------------------------------------
 ## File : slack_helper.py
-## Author : Denny <denny@dennyzhang.com>
+## Author : Denny <contact@dennyzhang.com>
 ## Description :
 ## --
 ## Created : <2017-05-22>
-## Updated: Time-stamp: <2017-07-11 20:49:05>
+## Updated: Time-stamp: <2017-09-04 18:52:05>
 ##-------------------------------------------------------------------
 import sys
 from flask import make_response

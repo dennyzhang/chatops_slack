@@ -1,8 +1,8 @@
 Travis CI Status: [![Build Status](https://travis-ci.org/DennyZhang/chatops_slack.svg?branch=master)](https://travis-ci.org/DennyZhang/chatops_slack)
 
+- Github Link: https://github.com/DennyZhang/chatops_slack
 - [![LinkedIn](https://www.dennyzhang.com/wp-content/uploads/sns/linkedin.png)](https://www.linkedin.com/in/dennyzhang001) [![Github](https://www.dennyzhang.com/wp-content/uploads/sns/github.png)](https://github.com/DennyZhang) [![Twitter](https://www.dennyzhang.com/wp-content/uploads/sns/twitter.png)](https://twitter.com/dennyzhang001) [![Slack](https://www.dennyzhang.com/wp-content/uploads/sns/slack.png)](https://www.dennyzhang.com/slack)
-
-- File me [tickets](https://github.com/DennyZhang/popular-github-template/issues) or star [this github repo](https://github.com/DennyZhang/popular-github-template)
+- File me [tickets](https://github.com/DennyZhang/chatops_slack/issues) or star [this github repo](https://github.com/DennyZhang/chatops_slack)
 
 - Check more: https://www.dennyzhang.com/chatqueryhost
 - Reference: https://github.com/slackapi/Slack-Python-Onboarding-Tutorial

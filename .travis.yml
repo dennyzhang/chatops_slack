@@ -7,4 +7,5 @@ install:
   - pip install nose pylint
 # command to run tests
 script:
-  - find . -name "*.py" | xargs pylint -E
+  - find . -name "*.py" | grep -v chatops.py | xargs pylint -E
+  

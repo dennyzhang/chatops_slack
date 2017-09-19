@@ -8,7 +8,7 @@ Python slack ChatOps
 
 - File me [tickets](https://github.com/DennyZhang/chatops_slack/issues) or star [the repo](https://github.com/DennyZhang/chatops_slack)
 
-- Check more: https://www.dennyzhang.com/chatqueryhost
+- Check more: https://www.dennyzhang.com/tag/chatops
 - Reference: https://github.com/slackapi/Slack-Python-Onboarding-Tutorial
 
 # Limitation

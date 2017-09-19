@@ -2,10 +2,10 @@
 ##
 ##  Image Name: 
 ##  Git link: 
-##  How To Build Docker Image: docker build --no-cache -t denny/chatops_slack:v1 -f Dockerfile_v1 --rm=true .
+##  How To Build Docker Image: docker build --no-cache -t denny/chatops_slack:v1 -f Dockerfile --rm=true .
 ##  Docker hub link:
 ##  Description:
-##  Read more: https://www.dennyzhang.com/chatqueryhost
+##  Read more: https://www.dennyzhang.com/tag/chatops
 ##################################################
 # Base Docker image: https://hub.docker.com/r/muccg/pylint/
 

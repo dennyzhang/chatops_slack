@@ -14,7 +14,7 @@ Python slack ChatOps
 # Limitation
 - Only Python3 is supported. (Use docker image by default)
 
-# Setup the env via docker
+# Setup ChatOps Server via docker-compose
 
 1. Prepare ssh_id_rsa and config.py
 

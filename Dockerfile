@@ -2,11 +2,11 @@
 ##
 ##  Image Name: 
 ##  Git link: 
-##  How To Build Docker Image: docker build --no-cache -t totvslabs/chatops:v1 -f Dockerfile_v1 --rm=true .
+##  How To Build Docker Image: docker build --no-cache -t denny/chatops_slack:v1 -f Dockerfile_v1 --rm=true .
 ##  Docker hub link:
 ##  Description: 
 ##################################################
-# Base image: https://raw.githubusercontent.com/DennyZhang/devops_docker_image/tag_v6/chatops/Dockerfile_v0
+# Base image: https://github.com/DennyZhang/chatops_slack/blob/master/Dockerfile
 
 FROM denny/chatops:v0
 

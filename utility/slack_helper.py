@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2017-05-22>
-## Updated: Time-stamp: <2017-09-04 18:52:05>
+## Updated: Time-stamp: <2017-09-04 18:59:25>
 ##-------------------------------------------------------------------
 import sys
 from flask import make_response
@@ -80,7 +80,6 @@ def slack_send_delay_response(para_list):
     function = para_list[1]
     arg_list = para_list[2]
     headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
-    # print "arg_list: %s" % (arg_list)
     # TODO: better implementation
     (summary, details) = function(arg_list)
     m = {"text": summary, "attachments": [{"text": details}]}

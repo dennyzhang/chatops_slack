@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2017-05-22>
-## Updated: Time-stamp: <2017-09-04 18:52:05>
+## Updated: Time-stamp: <2017-09-04 18:59:25>
 ##-------------------------------------------------------------------
 # TODO: move to python common library
 import os, sys, json
@@ -18,6 +18,9 @@ def quit_if_empty(string, err_msg):
         raise Exception("Error: string is null or empty. %s" % (err_msg))
 
 def string_in_pattern(string, patterns):
+    if patterns == '' or patterns is None:
+        return False
+
     pattern_list = patterns.split(",")
     for pattern in pattern_list:
         if re.search(pattern, string) is not None:

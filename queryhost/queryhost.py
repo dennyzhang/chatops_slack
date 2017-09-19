@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2017-01-01>
-## Updated: Time-stamp: <2017-07-12 11:35:30>
+## Updated: Time-stamp: <2017-07-14 11:36:49>
 ##-------------------------------------------------------------------
 import sys
 
@@ -16,15 +16,17 @@ import paramiko
 import json
 
 def ssh_queryhost(arg_list):
-    [server, username, ssh_port, ssh_key_file, key_passphrase, role, pid_file, log_file] = arg_list
+    [server, username, ssh_port, ssh_key_file, key_passphrase, role, check_service_command, log_file] = arg_list
     try:
         # https://raw.githubusercontent.com/DennyZhang/devops_public/tag_v6/python/node_usage/node_usage.py
         ssh_command = "python /usr/sbin/node_usage.py"
-        if pid_file is not None:
-            ssh_command = "%s --pid_file %s" % (ssh_command, pid_file)
+        if check_service_command is not None:
+            ssh_command = "%s --check_service_command \"%s\"" % (ssh_command, check_service_command)
         if log_file is not None:
             ssh_command = "%s --log_file %s" % (ssh_command, log_file)
-        
+        # TODO: remove this
+        print("server: %s, ssh_command: %s" % (server, ssh_command))
+
         info_dict = ssh_query_node(server, username, ssh_port, ssh_key_file, key_passphrase, ssh_command)
         summary = "[Summary] Host: %s(%s)" % (info_dict['hostname'], info_dict['ipaddress_eth0'])
         if role is not None:
@@ -82,12 +84,14 @@ def ssh_query_node(server, username, ssh_port, ssh_key_file, key_passphrase, ssh
     return info_dict
 
 def get_node_detail(info_dict):
-    details = "RAM Usage: %s\nDisk Usage: %s\nCPU Load: %s\n" % \
-              (info_dict['ram']['used_percentage'], info_dict['disk']['used_percentage'], \
-               info_dict['cpu_load'])
+    details = ""
 
-    if "process_status" in info_dict:
-        details = "%s\n%s" % (details, info_dict['process_status'])
+    if "service_status" in info_dict:
+        details = "%s\n%s" % (details, info_dict['service_status'])
+
+    details = "%sRAM Usage: %s\nDisk Usage: %s\nCPU Load: %s\n" % \
+              (details, info_dict['ram']['used_percentage'], info_dict['disk']['used_percentage'], \
+               info_dict['cpu_load'])
 
     if "tail_log_file" in info_dict:
         details = "%s\n%s" % (details, info_dict['tail_log_file'])

@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2017-05-22>
-## Updated: Time-stamp: <2017-09-04 18:52:05>
+## Updated: Time-stamp: <2017-09-04 18:59:11>
 ##-------------------------------------------------------------------
 import sys, os
 from flask import Flask, request, make_response
@@ -40,6 +40,7 @@ from cloudexpense import cloudexpense
 from queryhost import ssh_queryhost, get_host_ip
 from clusterusage import ssh_query_cluster_usage
 
+from mdm import mdm
 ################################################################################
 application = Flask(__name__)
 
@@ -110,18 +111,22 @@ def chatqueryhost():
         host_query_string = request.args.get('text', '').strip()
 
         hostname_ip_dict = {}
+        # hostname_ip_dict = {'host1': '192.168.0.1', 'host2': '192.168.0.2'}
+        hostname_ip_dict = mdm.hostname_ip_mapping()
         (server, hostname, err_msg) = get_host_ip(host_query_string, hostname_ip_dict)
         if err_msg != '':
             summary = "Ops. Fail to get what you need"
             details = err_msg
             return response_content(summary, details)
         else:
-            (role, pid_file, log_file) = (None, None, None)
-            
+            (role, check_service_command, log_file) = (None, None, None)
+            (role, check_service_command, log_file) = mdm.get_node_role_info(server)
+
+            # TODO: avoid the hard code
             username = "root"
             ssh_port = 2702
 
-            arg_list = [server, username, ssh_port, SSH_KEY_FILE, KEY_PASSPHRASE, role, pid_file, log_file]
+            arg_list = [server, username, ssh_port, SSH_KEY_FILE, KEY_PASSPHRASE, role, check_service_command, log_file]
             item = [slack_send_delay_response, [response_url, ssh_queryhost, arg_list]]
             slack_task_queue.put(item)
             print("queue: %s, Queue size: %d" % (slack_task_queue, slack_task_queue.qsize()))
@@ -139,6 +144,10 @@ def chatclusterusage():
         verify_slack_username('GET', inspect.stack()[0][3], METHOD_ACL_USERLIST)
 
         (server_list, role_dict) = ([], {})
+        # server_list = ["192.168.0.1", "192.168.0.2"]
+        (server_list, role_dict) = mdm.get_cluster_info()
+
+        # TODO: avoid the hard code
         username = "root"
         ssh_port = 2702
         response_url = get_response_url('GET')

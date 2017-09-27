@@ -12,7 +12,7 @@ Python slack ChatOps
 - Reference: https://github.com/slackapi/Slack-Python-Onboarding-Tutorial
 
 # System Design
-- Limitation: Only Python3 is supported. (Use docker image by default)
+- Limitation: Only Python3 is supported. (Use [docker deployment](./docker-compose.yml) by default)
 
 # Setup ChatOps Server via docker-compose
 

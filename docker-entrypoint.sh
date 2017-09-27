@@ -5,6 +5,9 @@ echo "remove pyc files"
 find . -type f -name "*.pyc" -print0 | xargs rm -rf
 
 # TODO: verify config.py is configured
+if [ ! -f config.py ]; then
+    echo "ERROR: config.py"
+fi
 
 # TODO: show warning, if ssh key file is not there
 

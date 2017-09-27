@@ -3,6 +3,7 @@
 ##-------------------------------------------------------------------
 
 # Prevent malicious call with invalid token
+# TODO: add more doc
 ALLOWED_TOKEN_LIST = []
 
 # For sensitive methods can only be invoked by given users
@@ -13,18 +14,22 @@ METHOD_ACL_USERLIST = {
 }
 
 ################################################################################
+# For /chatqueryhost and /chatclusterusage
+
+# ssh key: Here we assume one private key can login to all related ssh servers
+SSH_KEY_FILE = ''
+
+# Configure this, if your ssh key has beeen protected by passphrase
+# For unfamilar users, check: https://www.dennyzhang.com/ssh_passphrase
+KEY_PASSPHRASE = ''
+################################################################################
+# For /chatcloudexpense
+
 # cloud token for cloud bills
 LINODE_TOKEN = ''
 DIGITALOCEAN_TOKEN = ''
 
-# cloud expense
+# Rule out some VMs or Volumes from the caculation
 SKIP_VM_PATTERNS = ''
 SKIP_VOLUMES_PATTERNS = ''
-
 ################################################################################
-
-# ssh key
-SSH_KEY_FILE = ''
-
-# TODO: protect passphrase
-KEY_PASSPHRASE = ''

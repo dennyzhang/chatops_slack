@@ -27,7 +27,11 @@ wget -O /usr/sbin/node_usage.py \
      https://raw.githubusercontent.com/DennyZhang/devops_public/tag_v6/python/node_usage/node_usage.py
 ```
 
-## 3. Have a try
+## 3. Create slack commands in Slack setting page
+Configure Slack Commands for each python flask endpoint.
+
+## 4. Try the bots in Slack
+![](images/chatops.jpg)
 
 # Useful commands
 ```

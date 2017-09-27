@@ -9,7 +9,6 @@ Python slack ChatOps
 - File me [tickets](https://github.com/DennyZhang/chatops_slack/issues) or star [the repo](https://github.com/DennyZhang/chatops_slack)
 
 - Check more: https://www.dennyzhang.com/tag/chatops
-- Reference: https://github.com/slackapi/Slack-Python-Onboarding-Tutorial
 
 # System Design
 - Limitation: Only Python3 is supported. (Use [docker deployment](./docker-compose.yml) by default)
@@ -41,3 +40,6 @@ tail -f /tmp/uwsgi-wsgi.log
 
 docker-compose down && docker-compose up -d && docker exec -it devops_chatops tail -f /tmp/uwsgi-wsgi.log
 ```
+
+# More Resources
+- Reference: https://github.com/slackapi/Slack-Python-Onboarding-Tutorial

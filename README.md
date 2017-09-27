@@ -11,7 +11,7 @@ Python slack ChatOps
 - Check more: https://www.dennyzhang.com/tag/chatops
 
 # System Design
-- Limitation: Only Python3 is supported. (Use [docker deployment](./docker-compose.yml) by default)
+- Limitation: Only Python3 is supported. (Use [docker](./docker-compose.yml) to deploy by default).
 
 # How To Use
 ## 1. Setup ChatOps Server via docker-compose

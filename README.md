@@ -41,5 +41,8 @@ tail -f /tmp/uwsgi-wsgi.log
 docker-compose down && docker-compose up -d && docker exec -it devops_chatops tail -f /tmp/uwsgi-wsgi.log
 ```
 
+# Limitation
+1. Query nodes from slack, we use ssh private key. Here we assume one private key can login to all related nodes
+
 # More Resources
 - Reference: https://github.com/slackapi/Slack-Python-Onboarding-Tutorial

@@ -14,17 +14,20 @@ Python slack ChatOps
 # System Design
 - Limitation: Only Python3 is supported. (Use [docker deployment](./docker-compose.yml) by default)
 
-# Setup ChatOps Server via docker-compose
+# How To Use
+## 1. Setup ChatOps Server via docker-compose
 
 1. Prepare ssh_id_rsa and config.py
 
 2. docker-compose up -d
 
-# Setup in client nodes
+## 2. Setup in client nodes
 ```
 wget -O /usr/sbin/node_usage.py \
      https://raw.githubusercontent.com/DennyZhang/devops_public/tag_v6/python/node_usage/node_usage.py
 ```
+
+## 3. Have a try
 
 # Useful commands
 ```

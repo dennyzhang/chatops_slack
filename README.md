@@ -17,9 +17,9 @@ Python slack ChatOps
 # How To Use
 ## 1. Setup ChatOps Server via docker-compose
 
-1. Prepare ssh_id_rsa and config.py
+1.1. Prepare ssh_id_rsa and config.py
 
-2. docker-compose up -d
+1.2. docker-compose up -d
 
 ## 2. Setup in client nodes
 ```

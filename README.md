@@ -13,6 +13,16 @@ Python slack ChatOps
 # System Design
 - Limitation: Only Python3 is supported. (Use [docker](./docker-compose.yml) to deploy by default).
 
+# Major Default Slack Bots
+```
+DevOps ChatOps via Slack Commands. All commands starts with /chat*
+- /chatclusterusage: Overall resource usage, and summary by role.
+- /chatcloudexpense: Show cloud bills across different cloud providers.
+- /chatqueryhost [substring of hostname]: Query host without manual ssh.
+- /chathelp: Current online help usage
+```
+- TODO: guide people to add their own, if they want
+
 # How To Use
 ## 1. Setup ChatOps Server via docker-compose
 

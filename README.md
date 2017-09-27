@@ -30,7 +30,7 @@ wget -O /usr/sbin/node_usage.py \
 Configure Slack Commands for each python flask endpoint.
 
 ## 4. Try the bots in Slack
-![](images/chatops.jpg)
+![](https://raw.githubusercontent.com/DennyZhang/chatops_slack/master/images/chatops.jpg)
 
 # Useful commands
 ```

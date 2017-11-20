@@ -40,8 +40,7 @@ wget -O /usr/sbin/node_usage.py \
 Configure Slack Commands for each python flask endpoint.
 
 ## 4. Try the bots in Slack
-![](https://raw.githubusercontent.com/DennyZhang/chatops_slack/master/images/chatops.jpg)
-
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chatops_slack/master/images/chatops.jpg"/> </a>
 # Useful commands
 ```
 Check: docker-entrypoint.sh

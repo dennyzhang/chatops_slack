@@ -1,11 +1,11 @@
 #!/usr/bin/python
 ##-------------------------------------------------------------------
 ## File : cloudexpense_linode.py
-## Author : Denny <contact@dennyzhang.com>
+## Author : Denny <https://www.dennyzhang.com/contact>
 ## Description :
 ## --
 ## Created : <2017-05-22>
-## Updated: Time-stamp: <2017-09-04 18:59:25>
+## Updated: Time-stamp: <2017-11-13 11:00:55>
 ##-------------------------------------------------------------------
 # TODO: move to python common library
 import os, sys, json

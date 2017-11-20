@@ -11,7 +11,7 @@
 
 FROM codacy/codacy-pylint:1.0.121
 
-LABEL maintainer "Denny<contact@dennyzhang.com>"
+LABEL maintainer "Denny<https://www.dennyzhang.com/contact>"
 
 USER root
 
